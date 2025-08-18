@@ -52,12 +52,7 @@ export const HeroSection = () => {
                 variant="hero" 
                 size="hero" 
                 className="group w-full mobile-button touch-optimized animate-scale-in text-sm sm:text-base lg:text-xl px-6 sm:px-12 py-4 sm:py-6 h-auto"
-                onClick={() => {
-                  const currentParams = window.location.search;
-                  const baseUrl = 'https://casaorganizada.store/views/checkout.php?produto_id=9452213';
-                  const separator = currentParams ? '&' : '';
-                  window.location.href = baseUrl + separator + currentParams.substring(1);
-                }}
+                onClick={() => document.getElementById('purchase')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 🏠 Quero Transformar Minha Casa Agora
                 <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
