@@ -66,7 +66,12 @@ export const FinalCtaSection = () => {
             variant="secondary" 
             size="hero" 
             className="animate-pulse-soft bg-white text-primary hover:bg-white/90 font-bold text-sm sm:text-base lg:text-xl shadow-xl hover:shadow-2xl px-6 sm:px-12 py-4 sm:py-6 h-auto"
-            onClick={() => document.getElementById('purchase')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => {
+              const currentParams = window.location.search;
+              const baseUrl = 'https://casaorganizada.store/views/checkout.php?produto_id=9452213';
+              const separator = currentParams ? '&' : '';
+              window.location.href = baseUrl + separator + currentParams.substring(1);
+            }}
           >
             <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3" />
             Ver Oferta Especial
