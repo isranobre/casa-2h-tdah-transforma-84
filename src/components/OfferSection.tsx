@@ -153,6 +153,7 @@ export const OfferSection = () => {
                     size="lg" 
                     className="w-full mb-3 sm:mb-4 animate-pulse-soft font-bold text-xs sm:text-sm mobile-button touch-optimized h-10 sm:h-12"
                     id="purchase"
+                    onClick={() => document.getElementById('purchase')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     <ShoppingCart className="w-4 h-4 mr-2" />
                     GARANTIR TRANSFORMAÇÃO
